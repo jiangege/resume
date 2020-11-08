@@ -1,0 +1,185 @@
+:root {
+  --main-color: #000;
+  --page-bg-color: #eee;
+  --content-bg-color: #fff;
+  --accent-bg-color: #f7f7f7;
+  --accent-color: #000;
+  --border-color: #d1d1d1;
+  @media screen and (prefers-color-scheme: dark) {
+    --main-color: #fff;
+    --page-bg-color: rgb(27, 27, 27);
+    --content-bg-color: rgb(28, 33, 41);
+    --border-color: rgb(96, 135, 175);
+    --accent-color: rgb(205, 123, 59);
+    img {
+      filter: invert(100%);
+    }
+    em {
+      background: transparent;
+    } 
+  }
+}
+
+body {
+  background: var(--page-bg-color);
+  color: var(--main-color);
+  font-size: 20px;
+  line-height: 28px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  background: var(--content-bg-color);
+  max-width: 1024px;
+  padding: 0 16px 30px;
+  box-sizing: border-box;
+  border-radius: .5em;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.16);
+} 
+
+h1 {
+  font-size: 46px;
+  line-height: 54px;
+}
+
+h2 {
+  font-size: 38px;
+  line-height: 46px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 14px;
+  border-left: 4px solid var(--border-color);
+}
+
+em {
+  font-size: 0.9em;
+  padding: 0 3px;
+  border-radius: 3px;
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  background: var(--accent-bg-color);
+  font-style: normal;
+  margin: 0 3px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding: 0 40px;
+}
+
+.icon {
+  width: 20px;
+  margin: 0 8px;
+  vertical-align: middle;
+  &+span, &+a {
+    font-size: 20px;
+    line-height: 28px;
+    vertical-align: middle;
+  }
+
+  h1, h2, h3, h4 & {
+    width: 1em;
+    vertical-align: -2.5px;
+  }
+}
+
+header {
+  overflow: hidden;
+  text-align: center;
+  h1 {
+    margin: 30px 0;
+  }
+  h3 {
+    font-weight: 400;
+  }
+  .contact {
+    div {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    text-align: left;
+    .contact {
+      div {
+        display: block;
+      }
+    }
+  }
+  ul {
+    padding: 0 1ch;
+  }
+}
+
+@media screen and (max-width: 1034px) {
+  body {
+    background: var(--content-bg-color)
+  }
+  #content {
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 24px 0;
+  }
+  body {
+    background: white;
+  }
+  header .contact div.pdf {
+    display: none;
+  }
+  #content {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: white;
+    color: black;
+  }
+  hr {
+    display: none;
+  }
+  
+  a[href^=http]:after {
+      content:" < " attr(href) "> ";
+  }
+  article a[href^="#"]:after {
+     content: "";
+  }
+  a:not(:local-link):after {
+     content:" <" attr(href) "> ";
+  }
+  a[href^=http]:after {
+      content:" <" attr(href) "> ";
+  }
+}
