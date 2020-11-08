@@ -166,6 +166,15 @@ header {
     background: white;
     color: black;
   }
+  .page-break {
+    &::after {
+      display: block;
+      content: 'page';
+      color: transparent;
+    }
+    page-break-after: always;
+    margin-bottom: 100%;
+  }
   hr {
     display: none;
   }
