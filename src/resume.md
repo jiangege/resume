@@ -151,8 +151,6 @@
 
 ---
 
-<div class="page-break"></div>
-
 #### <img src="assets/tools-solid.svg" class="icon"> 技能清单
 - ★★★ JavaScript、CSS、HTML
 - ★★★ Vue、React
