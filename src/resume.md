@@ -21,7 +21,7 @@
 #### <img src="assets/info-circle-solid.svg" class="icon"> 个人信息 
  - 姓名: 袁仓健 / Jason Yuan
  - 男，1995 年出生
- - 求职意向：Web前端工程师
+ - 求职意向：技术负责人
  - 工作经验：8 年
  - 期望薪资：面谈
 

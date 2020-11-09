@@ -19,5 +19,5 @@
 ### 发布简历
 
 ```
-  npm run replease
+  npm run release
 ```
