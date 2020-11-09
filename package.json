@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "webpack serve",
     "build": "NODE_ENV=production webpack && node print.js",
-    "deploy": "subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "jason",
   "license": "ISC",
