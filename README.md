@@ -16,13 +16,8 @@
 1. 运行 `npm run start:dev`
 2. 编辑 `src/resume.md`
 
-### 生成简历
-```
-  npm run build
-```
-
 ### 发布简历
 
 ```
-  npm run deploy
+  npm run replease
 ```
